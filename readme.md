@@ -190,12 +190,12 @@ Fortunately, for the apps we do in this class, we'll only need to edit a few of 
 ├── app
 │   ├── controllers
 │   │   ├── application_controller.rb
-│   │   └── we're gonna add more stuff ehre
+│   │   └── we're gonna add more stuff here
 │   ├── models
 │   │   └── application_record.rb (we aren't gonna touch this today)
 │   └── views
 │       └── layouts
-│           └── application.html.erb
+│       |   └── application.html.erb
 │       └── we're gonna add more stuff here
 ├── config
 │   └── routes.rb
@@ -269,6 +269,7 @@ quoteRoutes.post('/', quotesController.create);
 quoteRoutes.put('/:id', quotesController.update);
 quoteRoutes.delete('/:id', quotesController.destroy);
 ```
+> Note: Check out the chart on the back wall of the class ;)
 
 ### `resources :thing`
 
@@ -284,7 +285,7 @@ Then run `rails routes` again. What do you notice?
 
 ## 🚀 LET'S DO TOGETHER: More controllers!
 
-For this code-together, we're going to add another controller.
+For this code-catchUP, we're going to add another controller.
 
 So far, our dino app has:
 - A `welcome` route that displays the text `hello world`
@@ -367,6 +368,12 @@ Another godly thing about Rails is that it provides your with url helper methods
 There are two magics going on here -
 1. `link_to` is a method available in Rails views that create anchor tags. The first argument is the text that will be displayed in the link. The second is the href for the link.
 2. `dinos_path` is a url helper method that returns the about path, or rather, the path that will resolve to the dinosaur route defined in our routes controller.
+
+#### Bonus magic!!!
+Today we were writing our own files and controller.
+There is a generator for it `rails g controller <ControllerName> <actions you need in your controller>`
+Play around, add some more routes and controllers for our dinos app ;)
+
 
 
 
